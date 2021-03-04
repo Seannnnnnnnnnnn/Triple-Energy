@@ -8,5 +8,11 @@
 /* desktop */
 @media screen and (min-width: 769px) {
 
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: #243D4E;
+    }
+
 
 }
