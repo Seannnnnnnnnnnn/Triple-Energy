@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 /* mobiel */
-@media screen and (min-width: 100px) and (max-width:768.9px){
+@media screen and (max-width:768.9px){
 
 }
 
@@ -12,6 +12,18 @@
         margin: 0;
         padding: 0;
         background-color: #243D4E;
+    }
+
+    #banner-img {
+        width: 100vw;
+    }
+
+    #aanbiedingen {
+        color: white;
+    }
+
+    #aanbiedingen-flex {
+        display: flex;
     }
 
 
