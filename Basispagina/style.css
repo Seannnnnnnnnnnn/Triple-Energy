@@ -18,12 +18,25 @@
         width: 100vw;
     }
 
-    #aanbiedingen {
+    .alinea {
         color: white;
     }
 
-    #aanbiedingen-flex {
+    .alinea h1 {
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+
+    .alinea-flex {
         display: flex;
+        width: 90vw;
+        margin: auto;
+    }
+
+    .section_img{
+        width: 20vw;
+        margin-left: 10vw;
+        
     }
 
 
