@@ -12,10 +12,58 @@
 }
 
 @media screen and (min-width: 100px) and (max-width:768.9px) {
+	.alinea {
+		color: white;
+	}
+  
+	.alinea h1 {
+		text-align: center;
+		margin: 3vh;
+	}
+  
+	.alinea-flex {
+		display: flex;
+		flex-direction: column;
+		width: 90vw;
+		margin: auto;
+	}
+  
+	.section_img{
+		width: 80vw;
+		margin-left: 0vw;
+		
+	}
 
+	#banner-img {
+		width: 100vw;
+	}
 }
 
 
 @media screen and (min-width: 769px) {
+
+	.alinea {
+		color: white;
+	}
+  
+	.alinea h1 {
+		text-align: center;
+		margin: 3vh;
+	}
+  
+	.alinea-flex {
+		display: flex;
+		width: 90vw;
+		margin: auto;
+	}
+  
+	.section_img{
+		width: 20vw;
+		margin-left: 10vw;
+	}
+	
+	#banner-img {
+		width: 100vw;
+	}
     
 }
