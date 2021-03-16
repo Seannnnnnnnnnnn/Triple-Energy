@@ -38,6 +38,12 @@
         <img src="images/sport.jpg" alt="Prachtige omgeving, bijna net zo prachtig als de smaak van Triple Energy" id="banner-img">
     </article>
 
+
+    
+
+
+
+
     <article class="alinea">
         <h1>Aanbiedingen</h1>
 
