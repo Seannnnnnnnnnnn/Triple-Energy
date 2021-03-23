@@ -9,6 +9,26 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php 
+    
+    // stap 1: verbinding maken
+
+    $host = 'localhost';
+    $user = 'root';
+    $pass ="";
+    $database = 'energy';
+
+
+    $conn = new mysqli($host, $user, $pass, $database);
+    if ($conn->connect_error){
+        echo $conn->connect_error;
+}    
+    
+    ?>
+
+
+
     <header>
         <img class="logo" src="Images/logo.png" alt="logo" height="115px">
         <a href="#" id="openbtn" onclick="openBtn()"><i class="fas fa-bars"></i></a>
@@ -48,41 +68,92 @@
         <h1>Aanbiedingen</h1>
 
         <div class="alinea-flex">
-            <section style="margin: 1%;">
-                <p>aanbieding</p>
+            <section>
+
+                <?php
+                    // stap 2: data uitlezen
+
+                    $sql = "SELECT titel FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 1";
+
+                    $result = $conn->query($sql); 
+
+                    if($result){
+                        // stap 3: uitgelezen data gebruiken
+                        while($row = $result->fetch_row()){
+                        echo "<p>" . $row[0] . "</p>";
+                        }  
+                    }
                 
-                <img src="Images/placeholder.png" alt="" class="section_img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Gravida arcu ac tortor dignissim convallis. 
-                    Elit eget gravida cum sociis natoque penatibus et magnis. 
-                    In nisl nisi scelerisque eu ultrices vitae auctor eu augue. 
-                    Ut etiam sit amet nisl purus. Egestas fringilla phasellus 
-                    faucibus scelerisque eleifend donec pretium vulputate 
-                    sapien. A diam maecenas sed enim ut sem viverra aliquet. 
-                    Pharetra et ultrices neque ornare aenean euismod elementum. 
-                    Sagittis purus sit amet volutpat. Sed augue lacus viverra 
-                    vitae congue. Sed lectus vestibulum mattis ullamcorper 
-                    velit sed ullamcorper morbi tincidunt. Vitae semper quis 
-                    lectus nulla at.</p>
+                
+                    // stap 2: data uitlezen
+
+                    $sql = "SELECT afbeelding FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 1";
+
+                    $result = $conn->query($sql); 
+
+                    if($result){
+                        // stap 3: uitgelezen data gebruiken
+                        while($row = $result->fetch_row()){
+                        echo " <img src='Images/" . $row[0] . "' class='section_img'>";
+                        }  
+                    }
+                
+                
+                    // stap 2: data uitlezen
+
+                    $sql = "SELECT omschrijving FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 1";
+
+                    $result = $conn->query($sql); 
+
+                    if($result){
+                        // stap 3: uitgelezen data gebruiken
+                        while($row = $result->fetch_row()){
+                        echo "<p>" . $row[0] . "</p>";
+                        }  
+                    }
+                
+                ?>
             </section>
     
-            <section style="margin: 1%;">
-                <p>aanbieding</p>
-                <img src="Images/placeholder.png" alt="" class="section_img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Gravida arcu ac tortor dignissim convallis. 
-                    Elit eget gravida cum sociis natoque penatibus et magnis. 
-                    In nisl nisi scelerisque eu ultrices vitae auctor eu augue. 
-                    Ut etiam sit amet nisl purus. Egestas fringilla phasellus 
-                    faucibus scelerisque eleifend donec pretium vulputate 
-                    sapien. A diam maecenas sed enim ut sem viverra aliquet. 
-                    Pharetra et ultrices neque ornare aenean euismod elementum. 
-                    Sagittis purus sit amet volutpat. Sed augue lacus viverra 
-                    vitae congue. Sed lectus vestibulum mattis ullamcorper 
-                    velit sed ullamcorper morbi tincidunt. Vitae semper quis 
-                    lectus nulla at.</p>
+            <section>
+            <?php
+                    // stap 2: data uitlezen
+
+                    $sql = "SELECT titel FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 2";
+
+                    $result = $conn->query($sql); 
+
+                    if($result){
+                        // stap 3: uitgelezen data gebruiken
+                        while($row = $result->fetch_row()){
+                        echo "<p>" . $row[0] . "</p>";
+                        }  
+                    }
+                
+                    $sql = "SELECT afbeelding FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 2";
+
+                    $result = $conn->query($sql); 
+
+                    if($result){
+                        // stap 3: uitgelezen data gebruiken
+                        while($row = $result->fetch_row()){
+                        echo " <img src='Images/" . $row[0] . "' class='section_img'>";
+                        }  
+                    }
+                    // stap 2: data uitlezen
+
+                    $sql = "SELECT omschrijving FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 2";
+
+                    $result = $conn->query($sql); 
+
+                    if($result){
+                        // stap 3: uitgelezen data gebruiken
+                        while($row = $result->fetch_row()){
+                        echo "<p>" . $row[0] . "</p>";
+                        }  
+                    }
+                
+                ?>
             </section>
         </div>
         
@@ -180,5 +251,15 @@
 
   <script src="js/global.js"></script>
   <script src="https://kit.fontawesome.com/5b96b17e8a.js" crossorigin="anonymous"></script>
+
+
+  <?php
+  
+  // stap 4: data vrijgeven
+  $result->close();
+  //stap 5: database sluiten
+  $conn->close();
+  
+  ?>
 </body>
 </html>
