@@ -80,7 +80,7 @@
                     if($result){
                         // stap 3: uitgelezen data gebruiken
                         while($row = $result->fetch_row()){
-                        echo "<p>" . $row[0] . "</p>";
+                        echo "<p class='section-titel'>" . $row[0] . "</p>";
                         }  
                     }
                 
@@ -126,7 +126,7 @@
                     if($result){
                         // stap 3: uitgelezen data gebruiken
                         while($row = $result->fetch_row()){
-                        echo "<p>" . $row[0] . "</p>";
+                        echo "<p class='section-titel'>" . $row[0] . "</p>";
                         }  
                     }
                 
@@ -158,6 +158,9 @@
         </div>
         
     </article>
+
+
+
 
     <article class="alinea">
         <h1>Triple Energy</h1>
@@ -202,6 +205,9 @@
         </div>
         
     </article>
+
+
+
 
     <article class="alinea">
         <h1>Evenementen</h1>
