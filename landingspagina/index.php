@@ -169,38 +169,16 @@
             <section style="margin: 1%;">
                 <p>Blikje</p>
                 
-                <img src="Images/placeholder.png" alt="" class="section_img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Gravida arcu ac tortor dignissim convallis. 
-                    Elit eget gravida cum sociis natoque penatibus et magnis. 
-                    In nisl nisi scelerisque eu ultrices vitae auctor eu augue. 
-                    Ut etiam sit amet nisl purus. Egestas fringilla phasellus 
-                    faucibus scelerisque eleifend donec pretium vulputate 
-                    sapien. A diam maecenas sed enim ut sem viverra aliquet. 
-                    Pharetra et ultrices neque ornare aenean euismod elementum. 
-                    Sagittis purus sit amet volutpat. Sed augue lacus viverra 
-                    vitae congue. Sed lectus vestibulum mattis ullamcorper 
-                    velit sed ullamcorper morbi tincidunt. Vitae semper quis 
-                    lectus nulla at.</p>
+                <img src="Images/voorbeeld2.png" alt="" class="section_img">
+                
+                <p>Probeer nu de nieuwste smaken van Triple Energy!</p>
             </section>
     
             <section style="margin: 1%;">
                 <p>Blikje</p>
-                <img src="Images/placeholder.png" alt="" class="section_img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Gravida arcu ac tortor dignissim convallis. 
-                    Elit eget gravida cum sociis natoque penatibus et magnis. 
-                    In nisl nisi scelerisque eu ultrices vitae auctor eu augue. 
-                    Ut etiam sit amet nisl purus. Egestas fringilla phasellus 
-                    faucibus scelerisque eleifend donec pretium vulputate 
-                    sapien. A diam maecenas sed enim ut sem viverra aliquet. 
-                    Pharetra et ultrices neque ornare aenean euismod elementum. 
-                    Sagittis purus sit amet volutpat. Sed augue lacus viverra 
-                    vitae congue. Sed lectus vestibulum mattis ullamcorper 
-                    velit sed ullamcorper morbi tincidunt. Vitae semper quis 
-                    lectus nulla at.</p>
+                <img src="Images/voorbeeld4.png" alt="" class="section_img">
+
+                <p>Probeer nu de nieuwste smaken van Triple Energy!</p>
             </section>
         </div>
         
