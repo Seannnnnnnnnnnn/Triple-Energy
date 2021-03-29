@@ -163,20 +163,19 @@
 
 
     <article class="alinea">
-        <h1 class='section-titel'>Blikjes</h1>
+        <h1 class='section-titel'><a href="#" > producten</a></h1>
 
         <div class="alinea-flex">
             <section style="margin: 1%; margin-right: 22vw">
                 <p class='section-titel'>Aardbei</p>
                 
-                <img src="Images/voorbeeld2.png" alt="" class="section_img">
+                <a href=#> <img src="Images/voorbeeld2.png" alt="" class="section_img"></a>
                 
                 <p>Probeer nu de nieuwste smaken van Triple Energy!</p>
             </section>
-    
             <section style="margin: 1%;">
                 <p class='section-titel'>Banaan</p>
-                <img src="Images/voorbeeld4.png" alt="" class="section_img">
+                <a href=#> <img src="Images/voorbeeld4.png" alt="" class="section_img"></a>
 
                 <p>Probeer nu de nieuwste smaken van Triple Energy!</p>
             </section>
