@@ -108,7 +108,7 @@
                     if($result){
                         // stap 3: uitgelezen data gebruiken
                         while($row = $result->fetch_row()){
-                        echo "<p>" . $row[0] . "</p>";
+                        echo "<p>" . $row[0] . "!</p>";
                         }  
                     }
                 
@@ -149,7 +149,7 @@
                     if($result){
                         // stap 3: uitgelezen data gebruiken
                         while($row = $result->fetch_row()){
-                        echo "<p>" . $row[0] . "</p>";
+                        echo "<p>" . $row[0] . "!</p>";
                         }  
                     }
                 
@@ -163,11 +163,11 @@
 
 
     <article class="alinea">
-        <h1>Triple Energy</h1>
+        <h1 class='section-titel'>Blikjes</h1>
 
         <div class="alinea-flex">
-            <section style="margin: 1%;">
-                <p>Blikje</p>
+            <section style="margin: 1%; margin-right: 22vw">
+                <p class='section-titel'>Aardbei</p>
                 
                 <img src="Images/voorbeeld2.png" alt="" class="section_img">
                 
@@ -175,7 +175,7 @@
             </section>
     
             <section style="margin: 1%;">
-                <p>Blikje</p>
+                <p class='section-titel'>Banaan</p>
                 <img src="Images/voorbeeld4.png" alt="" class="section_img">
 
                 <p>Probeer nu de nieuwste smaken van Triple Energy!</p>

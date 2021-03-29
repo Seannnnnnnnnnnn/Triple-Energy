@@ -59,11 +59,16 @@
 		display: flex;
 		width: 90vw;
 		margin: auto;
+		justify-content: center;
+	}
+
+	.alinea-flex section {
+		margin-left: auto;
+		margin-right: auto;
 	}
   
 	.section_img{
 		width: 20vw;
-		margin-left: 0vw;
 	}
 	
 	#banner-img {
