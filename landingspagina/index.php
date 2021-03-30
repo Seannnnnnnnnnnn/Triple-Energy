@@ -70,130 +70,38 @@
         <div class="alinea-flex">
             <section>
 
-                <?php
-                    // stap 2: data uitlezen
-
-                    $sql = "SELECT titel
-
-                    FROM aanbiedingen 
-                    
-                    Where einddatum > now()
-                    
-                    limit 1;";
-
-                    $result = $conn->query($sql); 
-
-                    if($result){
-                        // stap 3: uitgelezen data gebruiken
-                        while($row = $result->fetch_row()){
-                        echo "<p class='section-titel'>" . $row[0] . "</p>";
-                        }  
-                    }
-                
-                
-                    // stap 2: data uitlezen
-
-                    $sql = "SELECT afbeelding
-
-                    FROM aanbiedingen 
-                    
-                    Where einddatum > now()
-                    
-                    limit 1";
-
-                    $result = $conn->query($sql); 
-
-                    if($result){
-                        // stap 3: uitgelezen data gebruiken
-                        while($row = $result->fetch_row()){
-                        echo " <img src='Images/" . $row[0] . "' class='section_img'>";
-                        }  
-                    }
-                
-                
-                    // stap 2: data uitlezen
-
-                    $sql = "SELECT omschrijving
-
-                    FROM aanbiedingen 
-                    
-                    Where einddatum > now()
-                    
-                    limit 1";
-
-                    $result = $conn->query($sql); 
-
-                    if($result){
-                        // stap 3: uitgelezen data gebruiken
-                        while($row = $result->fetch_row()){
-                        echo "<p>" . $row[0] . "!</p>";
-                        }  
-                    }
-                
-                ?>
-            </section>
+               
     
-            <section>
+            
             <?php
                     // stap 2: data uitlezen
 
-                    $sql = "SELECT titel
+                    $sql = "SELECT titel, afbeelding, omschrijving
 
                     FROM aanbiedingen 
                     
                     Where einddatum > now()
                     
-                    limit 1
-                    offset 1";
+                    limit 2
+                    ";
 
                     $result = $conn->query($sql); 
 
                     if($result){
                         // stap 3: uitgelezen data gebruiken
                         while($row = $result->fetch_row()){
+                        echo "<section>";
                         echo "<p class='section-titel'>" . $row[0] . "</p>";
+                        echo " <img src='Images/" . $row[1] . "' class='section_img'>";
+                        echo "<p class='section-titel'>" . $row[2] . "</p>";
+                        echo "</section>";
                         }  
                     }
                 
-                    $sql = "SELECT afbeelding
-
-                    FROM aanbiedingen 
                     
-                    Where einddatum > now()
-                    
-                    limit 1
-                    offset 1;";
-
-                    $result = $conn->query($sql); 
-
-                    if($result){
-                        // stap 3: uitgelezen data gebruiken
-                        while($row = $result->fetch_row()){
-                        echo " <img src='Images/" . $row[0] . "' class='section_img'>";
-                        }  
-                    }
-                    // stap 2: data uitlezen
-
-                    $sql = "SELECT omschrijving
-
-                    FROM aanbiedingen 
-                    
-                    Where einddatum > now()
-                    
-                    limit 1
-                    offset 1;";
-
-                    $result = $conn->query($sql); 
-
-                    if($result){
-                        // stap 3: uitgelezen data gebruiken
-                        while($row = $result->fetch_row()){
-                        echo "<p>" . $row[0] . "!</p>";
-                        }  
-                    }
                 
                 ?>
-            </section>
+            
         </div>
         
     </article>
@@ -232,8 +140,37 @@
             <section style="margin: 1%;">
 
                 <p>evenement</p>
+
+                <?php
+
+                // stap 2: data uitlezen
+                $sql = "SELECT artiest_id
+
+                FROM evenementen
                 
-                <img src="Images/placeholder.png" alt="" class="section_img">
+                JOIN artiesten ON evenementen.artiest_id = artiesten.artiest_id
+                
+                where datum > NOW()
+                
+                limit 1
+                
+                ;";
+
+                $result = $conn->query($sql); 
+
+                if($result){
+                    // stap 3: uitgelezen data gebruiken
+                    while($row = $result->fetch_row()){
+                    echo " <img src='Images/" . $row[0] . "' class='section_img'>";
+                    }  // stap 4: data vrijgeven
+                    $result->close();
+                }
+            
+                
+                ?>
+
+                
+                <!--<img src="Images/101.jpg" class="section_img">-->
 
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -283,8 +220,7 @@
 
   <?php
   
-  // stap 4: data vrijgeven
-  $result->close();
+  
   //stap 5: database sluiten
   $conn->close();
   
