@@ -73,7 +73,13 @@
                 <?php
                     // stap 2: data uitlezen
 
-                    $sql = "SELECT titel FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 1";
+                    $sql = "SELECT titel
+
+                    FROM aanbiedingen 
+                    
+                    Where einddatum > now()
+                    
+                    limit 1;";
 
                     $result = $conn->query($sql); 
 
@@ -87,7 +93,13 @@
                 
                     // stap 2: data uitlezen
 
-                    $sql = "SELECT afbeelding FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 1";
+                    $sql = "SELECT afbeelding
+
+                    FROM aanbiedingen 
+                    
+                    Where einddatum > now()
+                    
+                    limit 1";
 
                     $result = $conn->query($sql); 
 
@@ -101,7 +113,13 @@
                 
                     // stap 2: data uitlezen
 
-                    $sql = "SELECT omschrijving FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 1";
+                    $sql = "SELECT omschrijving
+
+                    FROM aanbiedingen 
+                    
+                    Where einddatum > now()
+                    
+                    limit 1";
 
                     $result = $conn->query($sql); 
 
@@ -119,7 +137,14 @@
             <?php
                     // stap 2: data uitlezen
 
-                    $sql = "SELECT titel FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 2";
+                    $sql = "SELECT titel
+
+                    FROM aanbiedingen 
+                    
+                    Where einddatum > now()
+                    
+                    limit 1
+                    offset 1";
 
                     $result = $conn->query($sql); 
 
@@ -130,7 +155,14 @@
                         }  
                     }
                 
-                    $sql = "SELECT afbeelding FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 2";
+                    $sql = "SELECT afbeelding
+
+                    FROM aanbiedingen 
+                    
+                    Where einddatum > now()
+                    
+                    limit 1
+                    offset 1;";
 
                     $result = $conn->query($sql); 
 
@@ -142,7 +174,14 @@
                     }
                     // stap 2: data uitlezen
 
-                    $sql = "SELECT omschrijving FROM aanbiedingen WHERE aanbiedingen.aanbiedingen_id = 2";
+                    $sql = "SELECT omschrijving
+
+                    FROM aanbiedingen 
+                    
+                    Where einddatum > now()
+                    
+                    limit 1
+                    offset 1;";
 
                     $result = $conn->query($sql); 
 
@@ -191,9 +230,12 @@
 
         <div class="alinea-flex">
             <section style="margin: 1%;">
+
                 <p>evenement</p>
                 
                 <img src="Images/placeholder.png" alt="" class="section_img">
+
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore 
                     magna aliqua. Gravida arcu ac tortor dignissim convallis. 
@@ -211,7 +253,10 @@
     
             <section style="margin: 1%;">
                 <p>evenement</p>
+
                 <img src="Images/placeholder.png" alt="" class="section_img">
+
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore 
                     magna aliqua. Gravida arcu ac tortor dignissim convallis. 
