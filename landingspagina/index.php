@@ -93,7 +93,7 @@
                         echo "<section>";
                         echo "<p class='section-titel'>" . $row[0] . "</p>";
                         echo " <a href='#'><img src='Images/" . $row[1] . "' class='section_img'></a>";
-                        echo "<p class='section-titel'>" . $row[2] . "</p>";
+                        echo "<p>" . $row[2] . "!</p>";
                         echo "</section>";
                         }  
                     }
@@ -134,17 +134,17 @@
 
 
     <article class="alinea">
-        <h1>Evenementen</h1>
+        <h1><a href='#'>Evenementen</a></h1>
 
         <div class="alinea-flex">
-            <section style="margin: 1%;">
+            
 
-                <p>evenement</p>
+
 
                 <?php
 
                 // stap 2: data uitlezen
-                $sql = "SELECT artiest_id
+                $sql = "SELECT artiesten.naam, artiesten.artiest_id, artiesten.statement
 
                 FROM evenementen
                 
@@ -152,7 +152,7 @@
                 
                 where datum > NOW()
                 
-                limit 1
+                limit 2
                 
                 ;";
 
@@ -161,7 +161,11 @@
                 if($result){
                     // stap 3: uitgelezen data gebruiken
                     while($row = $result->fetch_row()){
-                    echo " <img src='Images/" . $row[0] . "' class='section_img'>";
+                    echo "<section style='margin: 1%;'>";
+                    echo "<p class='section-titel'>Een nieuw concert van " . $row[0] . "!</p>";
+                    echo "<img src='Images/" . $row[1] . ".jpg' class='section_img'>";
+                    echo "<p>" . $row[2] . "</p>";
+                    echo "</section>";
                     }  // stap 4: data vrijgeven
                     $result->close();
                 }
@@ -169,45 +173,6 @@
                 
                 ?>
 
-                
-                <!--<img src="Images/101.jpg" class="section_img">-->
-
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Gravida arcu ac tortor dignissim convallis. 
-                    Elit eget gravida cum sociis natoque penatibus et magnis. 
-                    In nisl nisi scelerisque eu ultrices vitae auctor eu augue. 
-                    Ut etiam sit amet nisl purus. Egestas fringilla phasellus 
-                    faucibus scelerisque eleifend donec pretium vulputate 
-                    sapien. A diam maecenas sed enim ut sem viverra aliquet. 
-                    Pharetra et ultrices neque ornare aenean euismod elementum. 
-                    Sagittis purus sit amet volutpat. Sed augue lacus viverra 
-                    vitae congue. Sed lectus vestibulum mattis ullamcorper 
-                    velit sed ullamcorper morbi tincidunt. Vitae semper quis 
-                    lectus nulla at.</p>
-            </section>
-    
-            <section style="margin: 1%;">
-                <p>evenement</p>
-
-                <img src="Images/placeholder.png" alt="" class="section_img">
-
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Gravida arcu ac tortor dignissim convallis. 
-                    Elit eget gravida cum sociis natoque penatibus et magnis. 
-                    In nisl nisi scelerisque eu ultrices vitae auctor eu augue. 
-                    Ut etiam sit amet nisl purus. Egestas fringilla phasellus 
-                    faucibus scelerisque eleifend donec pretium vulputate 
-                    sapien. A diam maecenas sed enim ut sem viverra aliquet. 
-                    Pharetra et ultrices neque ornare aenean euismod elementum. 
-                    Sagittis purus sit amet volutpat. Sed augue lacus viverra 
-                    vitae congue. Sed lectus vestibulum mattis ullamcorper 
-                    velit sed ullamcorper morbi tincidunt. Vitae semper quis 
-                    lectus nulla at.</p>
-            </section>
         </div>
         
     </article>
