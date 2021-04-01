@@ -161,7 +161,7 @@
                 if($result){
                     // stap 3: uitgelezen data gebruiken
                     while($row = $result->fetch_row()){
-                    echo "<section style='margin: 1%;'>";
+                    echo "<section>";
                     echo "<p class='section-titel'>Een nieuw concert van " . $row[0] . "!</p>";
                     echo "<img src='Images/" . $row[1] . ".jpg' class='section_img'>";
                     echo "<p>" . $row[2] . "</p>";
