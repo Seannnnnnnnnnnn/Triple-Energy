@@ -65,10 +65,10 @@
 
 
     <article class="alinea">
-        <h1>Aanbiedingen</h1>
+        <h1><a href='#'>Aanbiedingen</a></h1>
 
         <div class="alinea-flex">
-            <section>
+            
 
                
     
@@ -92,7 +92,7 @@
                         while($row = $result->fetch_row()){
                         echo "<section>";
                         echo "<p class='section-titel'>" . $row[0] . "</p>";
-                        echo " <img src='Images/" . $row[1] . "' class='section_img'>";
+                        echo " <a href='#'><img src='Images/" . $row[1] . "' class='section_img'></a>";
                         echo "<p class='section-titel'>" . $row[2] . "</p>";
                         echo "</section>";
                         }  

@@ -57,18 +57,14 @@
   
 	.alinea-flex {
 		display: flex;
-		width: 90vw;
-		margin: auto;
-		justify-content: center;
+		width: 100%;
+		align-items: stretch;
 	}
 
-	.alinea-flex section {
-		margin-left: auto;
-		margin-right: auto;
-	}
+
   
 	.section_img{
-		width: 20vw;
+		size: 10vw;
 	}
 	
 	#banner-img {
