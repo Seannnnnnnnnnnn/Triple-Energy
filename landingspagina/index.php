@@ -113,7 +113,7 @@
         <h1 class='section-titel'><a href="#" > producten</a></h1>
 
         <div class="alinea-flex">
-            <section style="margin: 1%; margin-right: 22vw">
+            <section style="">
                 <p class='section-titel'>Aardbei</p>
                 
                 <a href=#> <img src="Images/voorbeeld2.png" alt="" class="section_img"></a>
