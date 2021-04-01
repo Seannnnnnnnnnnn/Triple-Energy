@@ -116,13 +116,13 @@
             <section style="">
                 <p class='section-titel'>Aardbei</p>
                 
-                <a href=#> <img src="Images/voorbeeld2.png" alt="" class="section_img"></a>
+                <a href=#> <img src="Images/voorbeeld2.png" alt="" class="section_img" style="height: 250px"></a>
                 
                 <p>Probeer nu de nieuwste smaken van Triple Energy!</p>
             </section>
-            <section style="margin: 1%;">
+            <section>
                 <p class='section-titel'>Banaan</p>
-                <a href=#> <img src="Images/voorbeeld4.png" alt="" class="section_img"></a>
+                <a href=#> <img src="Images/voorbeeld4.png" alt="" class="section_img" style="height: 250px"></a>
 
                 <p>Probeer nu de nieuwste smaken van Triple Energy!</p>
             </section>
